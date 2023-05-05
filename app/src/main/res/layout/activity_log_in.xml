@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LogInActivity"
+    android:background="@drawable/bggradiant"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/logimage"
+        android:layout_width="177dp"
+        android:layout_height="164dp"
+        android:src="@drawable/tatvamsi"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.146" />
+
+    <EditText
+        android:id="@+id/emailtext"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:background="@drawable/input_border"
+        android:drawableLeft="@drawable/baseline_email_24"
+        android:ems="10"
+        android:fontFamily="sans-serif-light"
+        android:hint="Enter Email Id"
+        android:textColorHint="@color/textcolour"
+        android:textColor="@color/black"
+        android:includeFontPadding="true"
+        android:inputType="textEmailAddress"
+        android:paddingLeft="5dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logimage"
+        app:layout_constraintVertical_bias="0.09" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:autoText="true"
+        android:background="@drawable/input_border"
+        android:drawablePadding="10dp"
+        android:ems="10"
+        android:fontFamily="sans-serif-light"
+        android:hint="Enter Password"
+        android:textColorHint="@color/textcolour"
+        android:inputType="textPassword"
+        android:paddingLeft="5dp"
+        android:textAlignment="viewStart"
+        android:textColor="@color/black"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.509"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/emailtext"
+        app:layout_constraintVertical_bias="0.099" />
+
+    <TextView
+        android:id="@+id/forgotPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="26dp"
+        android:layout_marginEnd="212dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Forgot Password?"
+        android:textColor="@color/textcolour"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/password"
+        app:layout_constraintVertical_bias="0.027"
+        tools:ignore="HardcodedText" />
+
+
+    <TextView
+        android:id="@+id/newuser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="65dp"
+        android:layout_marginTop="40dp"
+        android:fontFamily="sans-serif-black"
+        android:text="New User?"
+        android:textColor="@color/textcolour"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginbtn"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/loginbtn"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:layout_marginBottom="55dp"
+        android:backgroundTint="@color/textcolour"
+        android:fontFamily="sans-serif-black"
+        android:text="Log In"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/newuser"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/signuptv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="147dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="65dp"
+        android:layout_marginBottom="142dp"
+        android:clickable="true"
+        android:fontFamily="sans-serif-black"
+        android:linksClickable="true"
+        android:text="Sign Up"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/newuser"
+        app:layout_constraintTop_toBottomOf="@+id/loginbtn"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="TouchTargetSizeCheck" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

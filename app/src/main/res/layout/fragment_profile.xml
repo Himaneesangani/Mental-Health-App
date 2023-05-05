@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="10dp"
+    android:background="@drawable/bggradiant">
+
+ <ImageView
+     android:id="@+id/profile_image"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_marginTop="67dp"
+     android:layout_marginBottom="17dp"
+     app:layout_constraintBottom_toTopOf="@+id/name_field"
+     app:layout_constraintEnd_toEndOf="parent"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintTop_toTopOf="parent"
+     android:src="@drawable/portrait" />
+
+ <EditText
+     android:id="@+id/name_field"
+     android:layout_width="300dp"
+     android:layout_height="48dp"
+     android:background="@drawable/input_border"
+     android:ems="10"
+     android:inputType="textPersonName"
+     android:paddingLeft="10dp"
+     android:text="Name"
+     android:hint="Name"
+     app:layout_constraintBottom_toTopOf="@+id/email_field"
+     app:layout_constraintEnd_toEndOf="parent"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintTop_toBottomOf="@+id/profile_image"
+     tools:ignore="MissingConstraints" />
+
+ <EditText
+     android:id="@+id/email_field"
+     android:layout_width="300dp"
+     android:layout_height="48dp"
+     android:layout_marginTop="20dp"
+     android:layout_marginBottom="20dp"
+     android:background="@drawable/input_border"
+     android:ems="10"
+     android:inputType="textEmailAddress"
+     android:paddingLeft="10dp"
+     android:text="Email ID"
+     android:hint="E-mail ID"
+     app:layout_constraintBottom_toTopOf="@+id/mobile_field"
+     app:layout_constraintEnd_toEndOf="parent"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintTop_toBottomOf="@+id/name_field" />
+
+ <EditText
+     android:id="@+id/mobile_field"
+     android:layout_width="300dp"
+     android:layout_height="48dp"
+     android:background="@drawable/input_border"
+     android:ems="10"
+     android:inputType="phone"
+     android:paddingLeft="10dp"
+     android:text="Mobile No."
+     android:hint="Mobile No."
+     app:layout_constraintBottom_toTopOf="@+id/date_field"
+     app:layout_constraintEnd_toEndOf="parent"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintTop_toBottomOf="@+id/email_field" />
+
+ <EditText
+     android:id="@+id/date_field"
+     android:layout_width="300dp"
+     android:layout_height="48dp"
+     android:layout_marginTop="20dp"
+     android:background="@drawable/input_border"
+     android:drawableLeft="@drawable/baseline_calendar_month_24"
+     android:drawablePadding="5dp"
+     android:ems="10"
+     android:text="Date of Birth"
+     android:hint="Date of Birth"
+     android:focusable="false"
+     android:clickable="true"
+     android:inputType="none"
+     android:focusableInTouchMode="false"
+     app:layout_constraintBottom_toTopOf="@+id/gender_group"
+     app:layout_constraintEnd_toEndOf="parent"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintTop_toBottomOf="@+id/mobile_field" />
+
+ <RadioGroup
+     android:id="@+id/gender_group"
+     android:layout_width="300dp"
+     android:layout_height="40dp"
+     android:layout_marginTop="20dp"
+     android:background="@drawable/input_border"
+     android:gravity="center"
+     android:orientation="horizontal"
+     app:layout_constraintBottom_toTopOf="@+id/logoutbtn"
+     app:layout_constraintEnd_toEndOf="parent"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintTop_toBottomOf="@+id/date_field">
+
+  <RadioButton
+      android:id="@+id/male_radio"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="left"
+      android:clickable="true"
+      android:text="Male"
+      tools:ignore="TouchTargetSizeCheck" />
+
+  <RadioButton
+      android:id="@+id/female_radio"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginLeft="20dp"
+      android:clickable="true"
+      android:text="Female"
+      tools:ignore="TouchTargetSizeCheck" />
+
+ </RadioGroup>
+
+ <Button
+     android:id="@+id/logoutbtn"
+     android:layout_width="wrap_content"
+     android:layout_height="48dp"
+     android:layout_marginTop="40dp"
+     android:layout_marginBottom="4dp"
+     android:backgroundTint="@color/textcolour"
+     android:fontFamily="sans-serif-black"
+     android:text="Log Out"
+     app:layout_constraintBottom_toTopOf="@+id/update_profile"
+     app:layout_constraintEnd_toEndOf="parent"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintTop_toBottomOf="@+id/gender_group" />
+
+ <TextView
+     android:id="@+id/update_profile"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_marginBottom="131dp"
+     android:text="Update Profile"
+     android:textColor="@color/textcolour"
+     android:textSize="18sp"
+     android:textStyle="bold"
+     app:layout_constraintBottom_toBottomOf="parent"
+     app:layout_constraintEnd_toEndOf="parent"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintTop_toBottomOf="@+id/logoutbtn" />
+
+ <ImageButton
+     android:id="@+id/imageButton"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_marginStart="85dp"
+     android:layout_marginTop="125dp"
+     app:layout_constraintEnd_toEndOf="parent"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintTop_toTopOf="parent"
+     app:srcCompat="@drawable/baseline_add_photo_alternate_24" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

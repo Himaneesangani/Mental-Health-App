@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">NewsApp</string>
+   <string-array name="options_array">
+      <item>Depression</item>
+      <item>Stress</item>
+      <item>Anxiety</item>
+      <item>Mood Disorders</item>
+      <item>Personality Disorders</item>
+      <item>Substance abuse</item>
+   </string-array>
+
+</resources>
