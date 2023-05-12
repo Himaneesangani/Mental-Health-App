@@ -4,6 +4,7 @@ import ConnectFragment
 import android.app.NotificationChannel
 import android.app.NotificationManager
 import android.content.Context
+import android.content.Intent
 import android.os.Build
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
@@ -20,8 +21,6 @@ class HomeScreenActivity : AppCompatActivity() {
         val connectFragment = ConnectFragment()
         val recoverFragment = RecoverFragment()
         val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottomNavigationView)
-
-
         replaceFragment(homeFragment)
 
         bottomNavigationView.setOnItemSelectedListener {
@@ -42,8 +41,13 @@ class HomeScreenActivity : AppCompatActivity() {
             true
         }
 
-
-
+    }
+    override fun onBackPressed() {
+        // Create an intent to start the MainActivity
+        val intent = Intent(this, MainActivity::class.java)
+        // Start the MainActivity and finish the current activity
+        startActivity(intent)
+        finish()
     }
 
     private fun replaceFragment(fragment: Fragment){

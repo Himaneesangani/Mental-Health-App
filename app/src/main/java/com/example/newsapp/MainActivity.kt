@@ -30,7 +30,6 @@ class MainActivity : AppCompatActivity(), NewsItemClicked {
         binding = ActivityMainBinding.inflate(layoutInflater)
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
-
          binding.floatingActionButton.setOnClickListener {
             if (user != null) {
                 // User is already logged in, redirect to homescreen
@@ -44,15 +43,12 @@ class MainActivity : AppCompatActivity(), NewsItemClicked {
                     startActivity(intent)
                 }
             }
-
         }
         binding.recyclerview.layoutManager = LinearLayoutManager(this)
         fetchData()
         mAdapter = NewsListAdapter( this)
         binding.recyclerview.adapter = mAdapter
-
     }
-
     private fun fetchData() {
         val url = "https://gnews.io/api/v4/top-headlines?category=general&lang=en&country=in&max=100&apikey=0a03011fb33b37102ab6b25230386c6f"
         val jsonObjectRequest = JsonObjectRequest(
@@ -78,19 +74,9 @@ class MainActivity : AppCompatActivity(), NewsItemClicked {
                 // Handle error
             }
         )
-
         // Access the RequestQueue through your singleton class.
         MySingleton.getInstance(this).addToRequestQueue(jsonObjectRequest)
     }
-
-//    override fun onResume(){
-//        super.onResume()
-//        sendBroadcast(
-//            Intent(this, NotificationReceiver::class.java)
-//        )
-//
-//    }
-
     override fun onItemClicked(items: News) {
         }
 

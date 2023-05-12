@@ -12,7 +12,6 @@
     tools:context=".SignUpActivity"
     tools:visibility="visible">
 
-
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="177dp"
